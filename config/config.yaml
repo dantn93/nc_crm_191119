@@ -1,0 +1,9 @@
+Postgres:
+  HostName: rajje.db.elephantsql.com
+  Username: xmrplgjg
+  Password: bM2L_DMJZTHV-vTZlF7Pg6-sEpv4vesE
+  Dbname: xmrplgjg
+  Debug: true
+
+JWTSeret:
+  JWTEncodeKey: mysecret1234
