@@ -50,3 +50,13 @@ func UpdateTruckLevel(r []*model.TruckLevel) error {
 	}
 	return tx.Commit().Error
 }
+
+func GetTruckLevel() (*[]model.TruckLevel, error) {
+	var truckLevels []model.TruckLevel
+	db := GetDB()
+	defer db.Close()
+	if dbc := db.Find(&truckLevels); dbc.Error != nil {
+		return nil, dbc.Error
+	}
+	return &truckLevels, nil
+}

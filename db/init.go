@@ -24,6 +24,7 @@ func GetDB() *gorm.DB {
 	once.Do(func() {
 		db1 = new()
 	})
+
 	return db1
 }
 
