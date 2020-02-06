@@ -49,6 +49,7 @@ func Public(e *echo.Echo) {
 	g.GET("/contracts", handler.GetAllContracts)
 	g.PUT("/contract", handler.UpdateContract)
 	g.POST("/rate-card", handler.AddRateCard)
+	g.GET("/rate-card", handler.GetAllRateCard)
 	g.PUT("/rate-card", handler.UpdateRateCard)
 	g.DELETE("/rate-card", handler.DeleteRateCard)
 	g.POST("/rate-card-level", handler.AddRateCardLevel)

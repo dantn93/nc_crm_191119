@@ -94,6 +94,13 @@ func UpdateContract(c echo.Context) error {
 }
 
 // ===================== RATE CARD ======================//
+func GetAllRateCard(c echo.Context) error {
+	rateCards, err := db.GetAllRateCard()
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, err.Error())
+	}
+	return c.JSON(http.StatusOK, rateCards)
+}
 func AddRateCard(c echo.Context) error {
 	var r model.TruckRateCard
 	if err := c.Bind(&r); err != nil {

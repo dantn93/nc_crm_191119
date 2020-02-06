@@ -52,3 +52,13 @@ func DeleteRateCard(id int) error {
 	}
 	return tx.Commit().Error
 }
+
+func GetAllRateCard() (*[]model.TruckRateCard, error) {
+	var truckRateCards []model.TruckRateCard
+	db := GetDB()
+	defer db.Close()
+	if dbc := db.Find(&truckRateCards); dbc.Error != nil {
+		return nil, dbc.Error
+	}
+	return &truckRateCards, nil
+}
