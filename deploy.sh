@@ -1,6 +1,6 @@
 #!/bin/sh
-kubectl delete service tranngocdan-nc-crm-service
-kubectl delete deployment tranngocdan-nc-crm
+# kubectl delete service tranngocdan-nc-crm-service
+# kubectl delete deployment tranngocdan-nc-crm
 kubectl create -f provision/k8s/deployment.yaml
 kubectl get service tranngocdan-nc-crm-service
 
